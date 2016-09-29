@@ -1,10 +1,12 @@
 # Oblig4
-3 students learning java @ school
+
+<P>We are 3 computer engineering students learning
+the basics of java</p>
 
 author & contributor list:
 
-Codemaster64
+* Codemaster64
 
-BenniBanjo
+* BenniBanjo
 
-pettert85
+* pettert85
