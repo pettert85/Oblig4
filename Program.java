@@ -1,8 +1,6 @@
-public class program{
+public class program{//ctrl + shift + 3
   public static void main (String[] args){
     System.out.print("Hello World");
 	System.out.println("mora di");
-	//heisann
-	System.out.print("Hello World");
+
   }
-]
