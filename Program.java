@@ -4,7 +4,7 @@ public class Program{
 
     System.out.print("Hello World");
 	 	 System.out.println(" fungerer fra sublime :) det er jo supert");
-	 	 System.out.println("og igj");
+	 	 System.out.println("og igjen");
 
   	}
 }
