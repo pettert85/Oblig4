@@ -1,3 +1,3 @@
 public class GeometricObject{
-  System.out.print("Sphere");
+  System.out.print("Bullet");
 }
