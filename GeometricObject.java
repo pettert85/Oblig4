@@ -1,8 +1,15 @@
 public abstract class  GeometricObject{
 
+	//constructors
+	Rectangle(){
+
+	}
+
+	//Variables/Constants
 	private double thickness = 0;
 	private static final double IRON_WEIGHT = 7.8; //kg/dm^3
 
+	//Methods
 	abstract void  findArea();
 
 	abstract void findVolume();
@@ -13,7 +20,7 @@ public abstract class  GeometricObject{
 
 	abstract void findWeight();
   
-
+	//getter/setters
 	double getIronWeight(){
 		return IRON_WEIGHT;
 	} //getIronWeight
