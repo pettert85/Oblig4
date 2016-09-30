@@ -3,7 +3,8 @@ public abstract class  GeometricObject{
 	double thickness = 0;
 	private static final double IRON_WEIGHT = 7.8; //kg/dm^3
 
-	void findArea() {
+	double  findArea() {
+		return thickness;
 	} //findArea
 
 	void findVolume(){
