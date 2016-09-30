@@ -1,22 +1,30 @@
 public abstract class  GeometricObject{
 
-double thickness = 0;
-private static final double IRON_WEIGHT = 7.8; //kg/dm^3
+	double thickness = 0;
+	private static final double IRON_WEIGHT = 7.8; //kg/dm^3
 
-void findArea() {
+	void findArea() {
+	} //findArea
 
-} //findArea
+	void findVolume(){
+	} //findVolume
 
-void findVolume(){
-} //findVolume
+	void findCircumference(){
+	} //findCircumference
 
-void findCircumference(){
-} //findCircumference
+	void findSurfacearea(){
+	} //findSurfacearea
 
-void findSurfacearea(){
-} //findSurfacearea
-
-void findWeight(){
-} //findWeight
+	void findWeight(){
+	} //findWeight
   
+
+	double getIronWeight(){
+		return IRON_WEIGHT;
+	}
+
+	double setThickness(){
+		return thickness;
+	}
+
 }
