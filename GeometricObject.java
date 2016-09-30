@@ -21,10 +21,14 @@ public abstract class  GeometricObject{
 
 	double getIronWeight(){
 		return IRON_WEIGHT;
-	}
+	} //getIronWeight
 
-	double setThickness(){
+	double getThickness(){
 		return thickness;
-	}
+	} //getThickness
+
+	void setThickness(double x){
+		thickness = x;
+	} //setThickness
 
 }
