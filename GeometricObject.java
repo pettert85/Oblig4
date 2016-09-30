@@ -7,7 +7,7 @@ public abstract class  GeometricObject{
 
 	abstract void findVolume();
 
-	abstract void findCircumference();
+	abstract double findCircumference();
 
 	abstract void findSurfacearea();
 
