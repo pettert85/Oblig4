@@ -11,7 +11,7 @@ public abstract class Circle extends GeometricObject {
 	
 	//constructors
 	public Circle(){
-		radius = 0;Þ
+		radius = 0;
 	}
 
 	public Circle(double radius) {
