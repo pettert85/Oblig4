@@ -25,10 +25,8 @@ public abstract class Circle extends GeometricObject {
 	}
 	
 	public static double findAreaInner(double t) {
-		System.out.print(t);
-
 		double NewRadius = radius-t;
-		return  (NewRadius*NewRadius);
+		return  (NewRadius*NewRadius)* Math.PI;
 		
 	}
 
