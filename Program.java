@@ -12,7 +12,7 @@ public class Program{
 	public static void main (String[] args){
 
 		Scanner input = new Scanner(System.in);
-		GeometricObject sirkel = new Cylinder();
+		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
 		double radius;
 
 		
