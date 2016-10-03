@@ -20,12 +20,24 @@ public abstract class Circle extends GeometricObject {
 
 
 	//metoder
-	public double findArea() {
+	public static double findAreaOut() {
 		return (radius * radius) * Math.PI;
+	}
+	
+	public static double findAreaInner(double t) {
+		System.out.print(t);
+
+		double NewRadius = radius-t;
+		return  (NewRadius*NewRadius);
+		
 	}
 
 	public  double findCircumference() {
 		return (2 * Math.PI) * radius;
+	}
+
+	public  double findArea() {
+		return Math.PI * (radius * radius);
 	}
 
 
@@ -37,5 +49,8 @@ public abstract class Circle extends GeometricObject {
 
 		radius = r;
 	}
+	
+	
+	
 				
 } //Circle
