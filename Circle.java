@@ -7,10 +7,10 @@ public abstract class Circle extends GeometricObject {
 	  og getRadius og setRadius
 																										*/ 
 	
-	private double radius;
+	private static double radius;
 	
 	//constructors
-	public Circle(){
+	public Circle() {
 		radius = 0;
 	}
 
@@ -20,22 +20,22 @@ public abstract class Circle extends GeometricObject {
 
 
 	//metoder
-	public double findArea(){
+	public double findArea() {
 		return (radius * radius) * Math.PI;
 	}
 
-	public double findCircumference(){
+	public  double findCircumference() {
 		return (2 * Math.PI) * radius;
 	}
 
 
-	public double getRadius(){
+	public static double getRadius() {
 		return radius;
 	}
 
-	public void setRadius(double radius){
+	public static void setRadius(double r) {
 
-		this.radius = radius;
+		radius = r;
 	}
 				
 } //Circle
