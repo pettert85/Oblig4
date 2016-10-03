@@ -23,9 +23,9 @@ public class Program{
 		System.out.print("Tast inn Tykkelse: ");
 		tykkelse = input.nextDouble();
 		
-		GeometricObject sylinder = new Sphere(radius,tykkelse);
+		GeometricObject kule = new Sphere(radius,tykkelse);
 
-		System.out.println("Tyngden pa kula er" + Sphere.findweight() );
+		System.out.println("Tyngden pa kula er" + kule.findWeight() );
 
 
 
