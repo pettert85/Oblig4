@@ -24,7 +24,7 @@ public class Sphere extends Circle {
 		return 4*findAreaInner(tykkelse); //Får ikke sendt inn en verdi av tykkelse
 		
 	}
-	   static double findweight(){
+	   public double findWeight(){
 		  return ( findVoulumout() - findVoulumInner() ) * getIronWeight();
 		  
 	  }
@@ -37,6 +37,7 @@ public class Sphere extends Circle {
 	  //Må ha disse for at den skal kjøre
 	  
 	
+
 	public double findArea() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -52,8 +53,5 @@ public class Sphere extends Circle {
 		return 0;
 	}
 
-	public double findWeight() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 }
