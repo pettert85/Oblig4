@@ -8,6 +8,15 @@ public class Cylinder extends Circle {
 
 	double fiktiv;
 
+	//constructors
+	public Cylinder(){
+		super();
+	}
+
+	public Cylinder(double r, double h, double t){
+		super(r, t, h);
+	}
+
 	public double findVolume(){
 		return fiktiv;
 	}
