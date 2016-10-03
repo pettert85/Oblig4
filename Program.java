@@ -10,30 +10,44 @@ import java.util.Scanner;
 public class Program{
 
 	public static void main (String[] args){
-
-		Scanner input = new Scanner(System.in);
-		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
 		double radius;
 		double tykkelse;
 
+		Scanner input = new Scanner(System.in);
+
+		//Objekt sirkel
+		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
 		
+
 		System.out.print("Tast inn radius: ");
 		radius = input.nextDouble();
 
 		System.out.print("Tast inn Tykkelse: ");
 		tykkelse = input.nextDouble();
+
+
 		
+		//setter radius / tykkelse
 		Cylinder.setRadius(radius);
-
-		System.out.println("Sirkelen sin omkrets er " + sirkel.findCircumference() );
-		System.out.println("Sirkelen sitt areal er " + sirkel.findArea() );
-
-		System.out.println ("radiusen er: " + Cylinder.getRadius() );
-
 		GeometricObject.setThickness(tykkelse);
-		System.out.println("Tykkelsen er: " + GeometricObject.getThickness() );
 
+		System.out.println ("\nradiusen er: " + Cylinder.getRadius() );
+		System.out.println("Tykkelsen er: " + GeometricObject.getThickness() );
 		System.out.println("Jern veier: " + GeometricObject.getIronWeight() + " kg/dm^3" );
+
+		System.out.println("\nSirkelen sin omkrets er " + sirkel.findCircumference() );
+		System.out.println("Sirkelen sitt areal er " +  sirkel.findArea() );
+
+
+		System.out.println("\nKula:");
+		
+	
+		System.out.println("sirkelens omkrets er: " + sirkel.findCircumference() );
+
+		//opretter objekt kule
+		GeometricObject kule = new Sphere(radius,tykkelse);
+
+		System.out.println("Tyngden pa kula er: " + kule.findWeight() );
 
 
 
