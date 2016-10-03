@@ -14,17 +14,24 @@ public class Program{
 		Scanner input = new Scanner(System.in);
 		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
 		double radius;
+		double tykkelse;
 
 		
 		System.out.print("Tast inn radius: ");
 		radius = input.nextDouble();
+
+		System.out.print("Tast inn Tykkelse: ");
+		tykkelse = input.nextDouble();
 		
 		Cylinder.setRadius(radius);
 
 		System.out.println("Sirkelen sin omkrets er " + sirkel.findCircumference() );
 		System.out.println("Sirkelen sitt areal er " + sirkel.findArea() );
 
-		System.out.println ( Cylinder.getRadius() );
+		System.out.println ("radiusen er: " + Cylinder.getRadius() );
+
+		GeometricObject.setThickness(tykkelse);
+		System.out.println("Tykkelsen er: " + GeometricObject.getThickness() );
 
 
 
