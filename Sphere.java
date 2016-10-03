@@ -25,7 +25,7 @@ public class Sphere extends Circle {
 		
 	}
 	   public double findWeight(){
-		  return ( findVoulumout() - findVoulumInner() ) * getIronWeight();
+		  return ( ( findVoulumout() - findVoulumInner() ) * getIronWeight() );
 		  
 	  }
 	   public static void setTykkelse(double t) {
