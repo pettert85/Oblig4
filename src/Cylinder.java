@@ -20,4 +20,8 @@ public class Cylinder extends Circle {
 		return fiktiv;
 	}
 
+	public double findArea(){
+		return fiktiv;
+	}
+
 } //Cylinder
