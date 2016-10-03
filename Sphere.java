@@ -1,57 +1,71 @@
 
 public class Sphere extends Circle {
-	private static double tykkelse; //Greier ikke å endre variabelen (Static)
+	private static double tykkelse; 
 	
 	//constructors
 	public Sphere(){
 		
 		super();
-		tykkelse = 1;
 		}
 	public Sphere(double r, double t){
-		super(r);
-		tykkelse = t;
+		super(r, t);
 		}
-	
-	
-	//Metoder
-	  static double findVoulumout(){ 
-		return 4*findAreaOut();
-		
-	}
-	  static double findVoulumInner(){
-		
-		return 4*findAreaInner(tykkelse); //Får ikke sendt inn en verdi av tykkelse
-		
-	}
-	   public double findWeight(){
-		  return ( ( findVoulumout() - findVoulumInner() ) * getIronWeight() );
-		  
-	  }
-	   public static void setTykkelse(double t) {
 
-		   tykkelse = t;
-		}
-	  
-	  
-	  //Må ha disse for at den skal kjøre
-	  
+	//Methods
 	
+	/*
 
-	public double findArea() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
-	public double findVolume() {
-		// TODO Auto-generated method stub
+	disse metodene må benyttes til fordel for findVolumeout/inner og findAreaout/inner
+	da de allerede er definert i GeometricObject på denne måten vil vi slippe og oprette
+	unødvendige metoder for at filen ikke må være abstract.
+
+	*/
+	public double findVolume() { 
+		// Vi må bruke denne metoden for utvendig og innvendig volum
 		return 0;
 	}
 	
 	public double findSurfacearea() {
-		// TODO Auto-generated method stub
+		// Vi må bruke denne metoden for utvendi/innvendig areal
 		return 0;
 	}
 
+	   public double findWeight(){
+		  return 0;
+
+
+
+
+		  //return ( ( findVolumeout() - findVolumeInner() ) * getIronWeight() );
+		  
+	  }
+
+//Disse bør ikke brukes - har tatt vare på de pga formler
+	  
+	  /*
+	  static double findVolumeout(){ 
+		return 4*findAreaOut();
+		
+	}
+	  static double findVolumeInner(){
+		
+		return 4*findAreaInner(tykkelse); 
+		
+	}
+
+	//disse må ordnes - må benytte metoden findSurfacearea istedet.
 	
-}
+	public static double findAreaOut() {
+		return (getRadius() * getRadius() ) * Math.PI;
+	}
+	
+	public static double findAreaInner(double t) {
+		double NewRadius = getRadius() - getThickness() ;
+		return  (NewRadius*NewRadius)* Math.PI;
+		
+	}
+
+	*/
+	  
+	 
+} //Sphere
