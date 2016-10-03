@@ -33,6 +33,9 @@ public class Program{
 		GeometricObject.setThickness(tykkelse);
 		System.out.println("Tykkelsen er: " + GeometricObject.getThickness() );
 
+		System.out.println("Jern veier: " + GeometricObject.getIronWeight() + " kg/dm^3" );
+
+
 
 
 
