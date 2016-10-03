@@ -1,31 +1,33 @@
+/*
+Opretter her et geometrisk objekt kalt sirkel som benytter seg av klassen Cylinder fra den kan
+vi oprette objekter -  klassen Cylinder arver også Circle sine egenskaper
+
+*/
+
+
 import java.util.Scanner;
 
 public class Program{
 
 	public static void main (String[] args){
 
-	Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
+		GeometricObject sirkel = new Cylinder();
+		double radius;
 
-    String tekst = "Du liker ";
-    String minFavoritt ="hamburger";
+		
+		System.out.print("Tast inn radius: ");
+		radius = input.nextDouble();
+		
+		Cylinder.setRadius(radius);
 
-    System.out.print("Hva er din favorittmiddag? ");
-    String middag = input.nextLine();
+		System.out.println("Sirkelen sin omkrets er " + sirkel.findCircumference() );
+		System.out.println("Sirkelen sitt areal er " + sirkel.findArea() );
 
-    String sum = tekst.concat(middag);
+		System.out.println ( Cylinder.getRadius() );
 
-    System.out.println(sum);
-    System.out.println("Lengden av strengen er: " + sum.length() );
-    int like = middag.compareTo(minFavoritt);
 
-    if (like == 0) {
-    	System.out.println("Vi har samme smak, jeg liker nemlig også " + middag);
-    }
 
-    else{
-    	System.out.println("Vi liker forskjellige middager. jeg liker " + minFavoritt + " og du liker " +
-    						middag);
-    }
 
   	}
 }
