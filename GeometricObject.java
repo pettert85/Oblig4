@@ -5,40 +5,29 @@
 public abstract class  GeometricObject{
 
 
-	private static double thickness,height,radius,width;
+	private static double thickness;
 	private static final double IRON_WEIGHT = 7.8; //kg/dm^3
 
 	//constructors
 	protected GeometricObject(){
-		radius = 0;
 		thickness = 0;
-		height = 0;
-		width = 0;
 	}
 
-	protected GeometricObject(double r, double t) {
-		radius = r;
+	protected GeometricObject(double t) {
 		thickness = t;
 
 	}
-
-	protected GeometricObject(double r, double t, double h) {
-		radius = r;
-		thickness = t;
-		height = h;
-	}
-
 
 	//Abstract Methods
-	public abstract double findArea();
+	protected abstract double findArea();
 
-	public abstract double findVolume();
+	protected abstract double findVolume();
 
-	public abstract double findCircumference();
+	protected abstract double findCircumference();
 
-	public abstract double findSurfacearea();
+	protected abstract double findSurfacearea();
 
-	public abstract double findWeight();
+	protected abstract double findWeight();
 
 	
 	//Getter/setters
@@ -53,21 +42,5 @@ public abstract class  GeometricObject{
 	public static void setThickness(double t){
 		thickness = t;
 	} //setThickness
-
-	public static double getRadius(){
-		return radius;
-	} //getRadius
-
-	public static void setRadius(double r){
-		radius = r;
-	} //setRadius
-
-	public static double getHeight(){
-		return height;
-	} //getHeight
-
-	public static void setHeight(double h){
-		height = h;
-	} //setHeight
 
 }
