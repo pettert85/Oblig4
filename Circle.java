@@ -1,28 +1,43 @@
 //behøver bare metoder som tilhører en sirkel
 
 public abstract class Circle extends GeometricObject { 
+	private static double radius,thickness;
 	
-	public Circle(){
+	protected Circle(){
 		
 		super();
+		radius = 0;
 		}
 
-	public Circle(double r, double t){
-		super(r, t);
+	protected Circle(double r){
+		radius = r;
 		} 
 
-	public Circle(double r, double t, double h){
-		super(r, t, h);
+	protected Circle(double r, double t){
+		super(t);
+		radius = r;
 		} 
 
 
 	//Methods
-	public  double findCircumference() {
-		return (2 * Math.PI) * getRadius();
+	protected  double findCircumference() {
+		return (2 * Math.PI) * radius;
 	}
 
-	public  double findArea() {
-		return Math.PI * ( getRadius() * getRadius() );
+	protected  double findArea() {
+		return Math.PI * ( radius * radius );
 	}
+
+
+	//getter/setters
+	public static double getRadius(){
+		return radius;
+	} //getRadius
+
+	public static void setRadius(double r){
+		radius = r;
+	} //setRadius
+
+
 				
 } //Circle
