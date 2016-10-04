@@ -6,27 +6,26 @@ dermed behøver ikke denne være abstrakt, vi kan opprette objekter gjennom denn
 
 public class Cylinder extends Circle { 
 
-	double fiktiv;
+	private static double height;
 
 	//constructors
 	public Cylinder(){
 		super();
+		height = 0;
 	}
 
 	public Cylinder(double r, double h, double t){
-		super(r, t, h);
+		super(r, t);
+		height = h;
 	}
 
-	public double findVolume(){
-		return fiktiv;
-	}
+	public static double getHeight(){
+		return height;
+	} //getHeight
 
-	public double findSurfacearea(){
-		return fiktiv;
-	}
-	
-	public double findWeight(){
-		return fiktiv;
-	}
+	public static void setHeight(double h){
+		height = h;
+	} //setHeight
+
 
 } //Cylinder
