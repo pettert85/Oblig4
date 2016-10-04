@@ -42,12 +42,13 @@ public class Program{
 		System.out.println("\nKula:");
 		
 	
-		System.out.println("sirkelens omkrets er: " + sirkel.findCircumference() );
-
 		//opretter objekt kule
-		GeometricObject kule = new Sphere(radius,tykkelse);
+		GeometricObject kule = new Sphere(radius, tykkelse);
 
+		System.out.println("kulas volum er: " + kule.findVolume() );
+		System.out.println("kulas overflateareal er: " + kule.findSurfacearea() );
 		System.out.println("Tyngden pa kula er: " + kule.findWeight() );
+
 
 
 
