@@ -11,7 +11,7 @@ public class Program{
 
 	public static void main (String[] args){
 		double radius;
-		double tykkelse;
+		double tykkelse,height;
 
 		Scanner input = new Scanner(System.in);
 
@@ -24,6 +24,9 @@ public class Program{
 
 		System.out.print("Tast inn Tykkelse: ");
 		tykkelse = input.nextDouble();
+
+		System.out.print("Tast inn høyde: ");
+		height = input.nextDouble();
 
 
 		
@@ -45,9 +48,19 @@ public class Program{
 		//opretter objekt kule
 		GeometricObject kule = new Sphere(radius, tykkelse);
 
-		System.out.println("kulas volum er: " + kule.findVolume() );
+		System.out.println("kulas indre volum er: " + kule.findVolume() );
 		System.out.println("kulas overflateareal er: " + kule.findSurfacearea() );
 		System.out.println("Tyngden pa kula er: " + kule.findWeight() );
+
+
+		//opretter objekt sylinder
+		
+		System.out.println("\nSylinder:");
+		GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
+
+		System.out.println("sylinderens indre volum er: " + sylinder.findVolume() );
+		System.out.println("sylinderens overflateareal er: " + sylinder.findSurfacearea() );
+		System.out.println("Tyngden til sylinderen er: " + sylinder.findWeight() );
 
 
 
