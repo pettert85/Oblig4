@@ -9,31 +9,50 @@ public class Box extends Rectangle
 		height = 1;
 	}
 
+	protected Box(double l, double w)
+	{
+		setLength(l);
+		setWidth(w);
+	}
+
 	protected Box(double l, double w, double h)
 	{
-		super(l, w);
+		setLength(l);
+		setWidth(w);
 		height = h;
 	}
 
 	//Methods
-	protected double findVolume(double l, double w, double h)
+	protected double findVolume()
 	{
-		return 	l * w * h;
+		return getLength() * getWidth() * height;
 	}
 
-	protected double findSurfaceArea(double l, double w, double h)
+	protected double findArea()
 	{
-		return (2 * l * w) + (2 * l * h) + (2 * w * h);
+		return 2 * getLenght() * getWidth() + 2 * getLength() *
+		  height + 2 * getWidth() * height;
 	}
 
-	protected double findCircumference(double l, double w, double h)
+	protected double findCircumference()
 	{
-		return (4 * l + 4 * w + 4 * h);
+			return 2 * getLength() + 2 * getWidth();
+	}
+	protected double findInnerVolume()
+	{
+		return (getLength() - 2 * super.getThickness()) * (getWidth() - 2 * super.getThickness()) *
+		  (height - 2 * super.getThickness());
+	}
+
+	protected double findSurfaceArea()
+	{
+		return (2 * getLength() * getWidth()) + (2 * getLength() * height) +
+		  (2 * getWidth() * height);
 	}
 
 	protected double findWeight()
 	{
-		return 2 * 2;
+		return this.findVolume() - this.findInnerVolume() * super.getIronWeight();
 	}
 
 

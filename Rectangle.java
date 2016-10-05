@@ -14,17 +14,17 @@ public abstract class Rectangle extends GeometricObject
 	protected Rectangle (double l, double w)
 	{
 		length = l;
-		width = 1;
+		width = w;
 	}
 
 	//Methods
 	protected double findArea(double l, double w)
 	{
-		return l*w;
+		return length * width;
 	}
 
 
-	protected double findCircumference (double l, double w)
+	protected double findCircumference(double l, double w)
 	{
 		return 2 * l + 2 * w;
 	}
