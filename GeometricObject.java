@@ -25,11 +25,11 @@ public abstract class  GeometricObject{
 
 	protected abstract double findCircumference();
 
-	protected abstract double findSurfacearea();
+	protected abstract double findSurfaceArea();
 
 	protected abstract double findWeight();
 
-	
+
 	//Getter/setters
 	public static double getIronWeight(){
 		return IRON_WEIGHT;

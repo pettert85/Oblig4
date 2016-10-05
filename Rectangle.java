@@ -1,32 +1,55 @@
-public class Rectangle extends GeometricObject
+public abstract class Rectangle extends GeometricObject
 {
-	private double height;
-	private double length;
-
+	private static double length, width;
 
 	//Default Constructor
-	public Rectangle()
+	protected Rectangle()
 	{
-		height = 1;
+		super();
 		length = 2;
+		width = 1;
 	}
 
 	//Constructor
-	public Rectangle (double h, double l)
+	protected Rectangle (double l, double w)
 	{
-		height = h;
+		length = l;
+		width = 1;
+	}
+
+	//Methods
+	protected double findArea(double l, double w)
+	{
+		return l*w;
+	}
+
+
+	protected double findCircumference (double l, double w)
+	{
+		return 2 * l + 2 * w;
+	}
+
+	//Getters n' setters
+	public static double getLength()
+	{
+		return length;
+	}
+
+	public static void setLength(double l)
+	{
 		length = l;
 	}
 
-	//Method
-	double findArea(double h, double l)
+	public static double getWidth()
 	{
-		return h * l;
+		return width;
 	}
 
-	//Method
-	double findCircumference (double h, double l)
+	public static void setWidth(double w)
 	{
-		return 2 * h + 2 * l;
+		width = w;
 	}
-}
+
+
+
+}//Rectangle
