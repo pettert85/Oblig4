@@ -30,7 +30,7 @@ public class Box extends Rectangle
 
 	protected double findArea()
 	{
-		return 2 * getLenght() * getWidth() + 2 * getLength() *
+		return 2 * getLength() * getWidth() + 2 * getLength() *
 		  height + 2 * getWidth() * height;
 	}
 

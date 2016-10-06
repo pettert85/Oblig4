@@ -17,7 +17,7 @@ public class Program{
 
 		//Objekt sirkel
 		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
-		
+
 
 		System.out.print("Tast inn radius: ");
 		radius = input.nextDouble();
@@ -29,7 +29,7 @@ public class Program{
 		height = input.nextDouble();
 
 
-		
+
 		//setter radius / tykkelse
 		Cylinder.setRadius(radius);
 		GeometricObject.setThickness(tykkelse);
@@ -43,23 +43,23 @@ public class Program{
 
 
 		System.out.println("\nKula:");
-		
-	
+
+
 		//opretter objekt kule
 		GeometricObject kule = new Sphere(radius, tykkelse);
 
 		System.out.println("kulas indre volum er: " + kule.findVolume() );
-		System.out.println("kulas overflateareal er: " + kule.findSurfacearea() );
+		System.out.println("kulas overflateareal er: " + kule.findSurfaceArea() );
 		System.out.println("Tyngden pa kula er: " + kule.findWeight() );
 
 
 		//opretter objekt sylinder
-		
+
 		System.out.println("\nSylinder:");
 		GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
 
 		System.out.println("sylinderens indre volum er: " + sylinder.findVolume() );
-		System.out.println("sylinderens overflateareal er: " + sylinder.findSurfacearea() );
+		System.out.println("sylinderens overflateareal er: " + sylinder.findSurfaceArea() );
 		System.out.println("Tyngden til sylinderen er: " + sylinder.findWeight() );
 
 

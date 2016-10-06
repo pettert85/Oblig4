@@ -1,4 +1,4 @@
-public class Cylinder extends Circle { 
+public class Cylinder extends Circle {
 
 	private static double height;
 
@@ -15,7 +15,7 @@ public class Cylinder extends Circle {
 
 
 	//Methods
-	
+
 	//Areal av grunnflate * høyde
 	protected double findVolume(){
 		double innerradius = getRadius() - getThickness();
@@ -25,13 +25,13 @@ public class Cylinder extends Circle {
 	}
 
 	//areal av bunn/topp/vegg
-	protected double findSurfacearea(){
+	protected double findSurfaceArea(){
 		double radius = getRadius();
 		double height = getHeight();
 
 		return 2 * Math.PI * Math.pow(radius, 2) + 2 * Math.PI * radius * height;
 	}
-	
+
 
 	protected double findWeight(){
 		double radius = getRadius();
