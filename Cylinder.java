@@ -48,6 +48,8 @@ public class Cylinder extends Circle {
 
 	public String toString(){
 
+		DecimalFormat df = new DecimalFormat("#.00");
+
 		return "\nThe cylinders " + super.toString() 
 			 + " and the height is: " + height + "dm\n"
 			 + "The volume is: " + findVolume() + "dm/3" 
