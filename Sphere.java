@@ -32,10 +32,13 @@ public class Sphere extends Circle {
 
 public String toString(){
 
-			return "\nThe Spheres " + super.toString() 
-			 + "\nThe volume is: " + findVolume() + "dm/3" 
-			 + "\nThe surfacearea is: " + findSurfaceArea()  + "dm/2"
-			 + "\nAnd the weight is: " + findWeight() + "kg.\n";
+	return "\nSphere:\n"
+		+ super.toString() 
+		+ "\n"
+		+ "\nThe spheres volume is: " + findVolume() + "dm/3" 
+		+ "\nThe spheres surfacearea is: " + findSurfaceArea()  + "dm/2"
+		+ "\nThe spheres weight is: " + findWeight() + "kg.\n";
 	}
+	
 
 } //Sphere
