@@ -19,7 +19,7 @@ public abstract class Rectangle extends GeometricObject
 	}
 
 	//Methods
-	protected double findArea(double l, double w)
+	protected double findArea()
 	{
 		return length * width;
 	}
@@ -51,6 +51,12 @@ public abstract class Rectangle extends GeometricObject
 		width = w;
 	}
 
-
+	public String toString()
+	{
+		return "The length is: " + length + "\n" +
+		  "The width is: " + width + "\n" +
+		  "The area of the base is: " + findArea() + "\n" +
+		  super.toString();
+	}
 
 }//Rectangle
