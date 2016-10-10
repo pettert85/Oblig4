@@ -6,10 +6,6 @@ public class Sphere extends Circle {
 		super();
 		}
 
-	protected Sphere(double r){
-		super(r);
-		}
-
 	protected Sphere(double r, double t){
 		super(r, t);
 		}
@@ -20,7 +16,7 @@ public class Sphere extends Circle {
 	//finner kulas indre volum
 	protected double findVolume(){
 		double innerRadius = getRadius() - getThickness();
-		return (4 / 3) * Math.PI * Math.pow( innerRadius, 3 );
+		return (4.0 / 3.0) * Math.PI * Math.pow( innerRadius, 3 );
 	}
 
 	//finner kulas overflateareal
@@ -31,9 +27,13 @@ public class Sphere extends Circle {
 	//finder vekten av kulas tykkelse
 	protected double findWeight(){
 		double radius = getRadius();
-		return getIronWeight() * ( (4 / 3) * Math.PI * Math.pow( radius, 3 ) - findVolume() );
+		return getIronWeight() * ( (4.0 / 3.0) * Math.PI * Math.pow( radius, 3 ) - findVolume() );
 	}
 
+public String toString(){
 
+		return super.toString() + ", " + "the surfacearea is " + findSurfaceArea() + 
+								" DM/2, and the weight is " + findWeight() + "kg.";
+	}
 
 } //Sphere
