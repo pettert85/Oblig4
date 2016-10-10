@@ -8,7 +8,7 @@ public class Cylinder extends Circle {
 		height = 1;
 	}
 
-	protected Cylinder(double r, double h, double t){
+	protected Cylinder(double r, double t, double h){
 		super(r, t);
 		height = h;
 	}
@@ -48,7 +48,8 @@ public class Cylinder extends Circle {
 
 	public String toString(){
 
-		return super.toString() + ", " + "and the height is " + height;
+		return super.toString() + ", " + "the surfacearea is " + findSurfaceArea() + 
+								" DM/2, and the weight is " + findWeight() + "kg.";
 	}
 
 
