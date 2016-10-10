@@ -5,7 +5,7 @@ public class Cylinder extends Circle {
 	//constructors
 	protected Cylinder(){
 		super();
-		height = 0;
+		height = 1;
 	}
 
 	protected Cylinder(double r, double h, double t){
@@ -26,16 +26,14 @@ public class Cylinder extends Circle {
 
 	//areal av bunn/topp/vegg
 	protected double findSurfaceArea(){
-		double radius = getRadius();
-		double height = getHeight();
 
-		return 2 * Math.PI * Math.pow(radius, 2) + 2 * Math.PI * radius * height;
+		return 2 * Math.PI * Math.pow(getRadius(), 2) + 2 * Math.PI * getRadius() * getHeight();
 	}
 
 
 	protected double findWeight(){
-		double radius = getRadius();
-		return getIronWeight() * ( (4 / 3) * Math.PI * Math.pow( radius, 3 ) - findVolume() );
+	
+		return ( ( Math.PI * Math.pow(getRadius(), 2) * height   - findVolume() ) * getIronWeight()  );
 	}
 
 
@@ -47,6 +45,11 @@ public class Cylinder extends Circle {
 	public static void setHeight(double h){
 		height = h;
 	} //setHeight
+
+	public String toString(){
+
+		return super.toString() + ", " + "and the height is " + height;
+	}
 
 
 } //Cylinder
