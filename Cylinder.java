@@ -48,9 +48,11 @@ public class Cylinder extends Circle {
 
 	public String toString(){
 
-		return "\nThe cylinders " + super.toString() + " and the height/length is: " + height + "dm\n"
-			 + "The volume is: " + findVolume() + "\nThe surfacearea is " + findSurfaceArea() 
-			 + " DM/2" + "\nAnd the weight is " + findWeight() + "kg.\n";
+		return "\nThe cylinders " + super.toString() 
+			 + " and the height is: " + height + "dm\n"
+			 + "The volume is: " + findVolume() + "dm/3" 
+			 + "\nThe surfacearea is: " + findSurfaceArea()  + "dm/2"
+			 + "\nAnd the weight is: " + findWeight() + "kg.\n";
 	}
 
 
