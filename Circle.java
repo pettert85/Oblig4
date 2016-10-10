@@ -36,7 +36,7 @@ public abstract class Circle extends GeometricObject {
 
 	public String toString(){
 
-		return "radius is: " + radius + "dm, " + super.toString();
+		return "Radius: " + radius + "dm.  " + super.toString();
 	}
 				
 } //Circle
