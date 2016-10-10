@@ -35,9 +35,9 @@ public String toString(){
 	return "\nSphere:\n"
 		+ super.toString() 
 		+ "\n"
-		+ "\nThe spheres volume is: " + findVolume() + "dm/3" 
-		+ "\nThe spheres surfacearea is: " + findSurfaceArea()  + "dm/2"
-		+ "\nThe spheres weight is: " + findWeight() + "kg.\n";
+		+ "\nThe spheres volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
+		+ "\nThe spheres surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
+		+ "\nThe spheres weight is: " + String.format("%.2f", findWeight() ) + "kg.\n";
 	}
 	
 
