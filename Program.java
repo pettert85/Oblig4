@@ -27,7 +27,6 @@ public class Program{
 			}while(figure<1 || figure>5);
 		
 
-		Scanner input = new Scanner(System.in);
 
 		//Objekt sirkel
 		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
@@ -69,14 +68,17 @@ public class Program{
 
 		//opretter objekt sylinder
 
-		System.out.println("\nSylinder:");
-		GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
+	
+		
 
+		GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
+/*
 		System.out.println("sylinderens indre volum er: " + sylinder.findVolume() );
 		System.out.println("sylinderens overflateareal er: " + sylinder.findSurfaceArea() );
 		System.out.println("Tyngden til sylinderen er: " + sylinder.findWeight() );
 
-
+*/
+		System.out.print( sylinder.toString() );
 
 
 
