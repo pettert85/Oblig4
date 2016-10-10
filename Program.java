@@ -25,8 +25,57 @@ public class Program{
 					}
 				
 			}while(figure<1 || figure>5);
+				System.out.print("Select a figure: \n Sphere = 1 \n Cylinder = 2 \n Cone = 3 \n Box = 4 \n Prism = 5 \n");
+			do{ 
+				figure = input.nextInt();
+			
+				if (figure<1 || figure>5){
+					System.out.println("You can only select a defined shape");
+					}
+				
+			}while(figure<1 || figure>5);
 		
 
+		if (figure == 1 ){//Sphere
+			do {
+				System.out.print("Tast in radius: ");
+				radius = input.nextDouble();
+	
+				System.out.print("Tast in Thickness: ");
+				tykkelse = input.nextDouble();
+				
+				if (radius<tykkelse){
+					System.out.println("Thickness can not be bigger than radius");  
+				}
+			}while(radius<tykkelse);
+			
+			GeometricObject sphere = new Sphere(radius, tykkelse);
+
+			System.out.println(sphere.toString());
+			}
+		
+		if (figure == 2 ){//Cylinder
+			do {
+				System.out.print("Tast in radius: ");
+				radius = input.nextDouble();
+	
+				System.out.print("Tast in height: ");
+				height = input.nextDouble();
+				
+				System.out.print("Tast in Thickness: ");
+				tykkelse = input.nextDouble();
+				
+				if (radius<tykkelse || height<2*tykkelse){
+					System.out.println("Thickness can not be bigger than radius or height");  
+				}
+			}while(radius<tykkelse || height<2*tykkelse);
+			
+			GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
+
+			System.out.print( sylinder.toString() );
+		}
+		
+/*
 
 		//Objekt sirkel
 		GeometricObject sirkel = new Cylinder(); // denne er litt merkelig men eneste måten jeg har fått det til.
@@ -80,7 +129,7 @@ public class Program{
 */
 		System.out.print( sylinder.toString() );
 
-
+*/
 
 
   	}
