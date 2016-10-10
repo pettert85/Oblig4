@@ -126,11 +126,10 @@ public class Program{
 		System.out.println("sylinderens overflateareal er: " + sylinder.findSurfaceArea() );
 		System.out.println("Tyngden til sylinderen er: " + sylinder.findWeight() );
 
-*/
+
 		System.out.print( sylinder.toString() );
 
 */
-
 
   	}
 }
