@@ -12,6 +12,20 @@ public class Program{
 	public static void main (String[] args){
 		double radius;
 		double tykkelse,height;
+		
+				Scanner input = new Scanner(System.in);
+		int figure;
+//Select figure
+		System.out.print("Select a figure: \n Sphere = 1 \n Cylinder = 2 \n Cone = 3 \n Box = 4 \n Prism = 5 \n");
+			do{ 
+				figure = input.nextInt();
+			
+				if (figure<1 || figure>5){
+					System.out.println("You can only select a defined shape");
+					}
+				
+			}while(figure<1 || figure>5);
+		
 
 		Scanner input = new Scanner(System.in);
 
