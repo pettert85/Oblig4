@@ -48,8 +48,13 @@ public class Cylinder extends Circle {
 
 	public String toString(){
 
-		return "The cylinders " + super.toString() + ", " + "the surfacearea is " + findSurfaceArea() + 
-								" DM/2, and the weight is " + findWeight() + "kg.\n";
+		DecimalFormat df = new DecimalFormat("#.00");
+
+		return "\nThe cylinders " + super.toString() 
+			 + " and the height is: " + height + "dm\n"
+			 + "The volume is: " + findVolume() + "dm/3" 
+			 + "\nThe surfacearea is: " + findSurfaceArea()  + "dm/2"
+			 + "\nAnd the weight is: " + findWeight() + "kg.\n";
 	}
 
 
