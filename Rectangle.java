@@ -11,8 +11,9 @@ public abstract class Rectangle extends GeometricObject
 	}
 
 	//Constructor
-	protected Rectangle (double l, double w)
+	protected Rectangle (double t, double l, double w)
 	{
+		super(t);
 		length = l;
 		width = w;
 	}
