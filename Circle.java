@@ -1,17 +1,13 @@
 //behøver bare metoder som tilhører en sirkel
 
 public abstract class Circle extends GeometricObject { 
-	private static double radius,thickness;
+	private static double radius;
 	
 	protected Circle(){
 		
 		super();
-		radius = 0;
+		radius = 1;
 		}
-
-	protected Circle(double r){
-		radius = r;
-		} 
 
 	protected Circle(double r, double t){
 		super(t);
@@ -25,7 +21,7 @@ public abstract class Circle extends GeometricObject {
 	}
 
 	protected  double findArea() {
-		return Math.PI * ( radius * radius );
+		return Math.PI * ( Math.pow(radius, 2) );
 	}
 
 
@@ -38,6 +34,9 @@ public abstract class Circle extends GeometricObject {
 		radius = r;
 	} //setRadius
 
+	public String toString(){
 
+		return "radius is: " + radius + ", " + super.toString();
+	}
 				
 } //Circle
