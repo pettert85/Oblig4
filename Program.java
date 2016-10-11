@@ -1,9 +1,3 @@
-/*
-Opretter her et geometrisk objekt kalt sirkel som benytter seg av klassen Cylinder fra den kan
-vi oprette objekter -  klassen Cylinder arver ogsÃ¥ Circle sine egenskaper
-
-*/
-
 
 import java.util.Scanner;
 
