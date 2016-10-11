@@ -40,11 +40,11 @@ public class Box extends Rectangle
 	public String toString()
 	{
 		return super.toString() +
-		 "The height is: " + height + "\n" +
-		 "The inner volume is: " + findVolume() + "\n" +
-		 "The circumference is: " + findCircumference() + "\n" +
-		 "The surfacearea is: " + findSurfaceArea() + "\n" +
-		 "The weight of the object is: " + findWeight();
+		 "The box' height is: " + String.format("%.2f", height) + "\n" +
+		 "The box' inner volume is: " + String.format("%.2f", findVolume()) + "\n" +
+		 "The box' circumference: " + String.format("%.2f", findCircumference()) + "\n" +
+		 "This box has a surfacearea of: " + String.format("%.2f", findSurfaceArea()) + "\n" +
+		 "The weight of the box is: " + String.format("%.2f", findWeight());
 	}
 
 

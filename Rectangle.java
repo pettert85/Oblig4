@@ -53,9 +53,9 @@ public abstract class Rectangle extends GeometricObject
 
 	public String toString()
 	{
-		return "The length is: " + length + "\n" +
-		  "The width is: " + width + "\n" +
-		  "The area of the base is: " + findArea() + "\n" +
+		return "Length: " + String.format("%.2f", length) + " dm\n" +
+		  "Width: " + String.format("%.2f", width) + " dm\n" +
+		  "Base area: " + String.format("%.2f", findArea()) + " dm\n" +
 		  super.toString();
 	}
 
