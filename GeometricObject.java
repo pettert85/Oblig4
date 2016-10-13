@@ -29,7 +29,7 @@ public abstract class  GeometricObject{
 
 	protected abstract double findWeight();
 
-	protected abstract double innervolume();
+	protected abstract double findInnerVolume();
 
 
 	//Getter/setters
