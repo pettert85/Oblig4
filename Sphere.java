@@ -34,8 +34,7 @@ public class Sphere extends Circle {
 
 	//finder vekten av kulas tykkelse
 	protected double findWeight(){
-		double radius = getRadius();
-		return getIronWeight() * ( (4.0 / 3.0) * Math.PI * Math.pow( radius, 3 ) - findVolume() );
+		return getIronWeight() * ( findVolume() - findInnerVolume() );
 	}
 
 public String toString(){
