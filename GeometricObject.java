@@ -29,6 +29,8 @@ public abstract class  GeometricObject{
 
 	protected abstract double findWeight();
 
+	protected abstract double innervolume();
+
 
 	//Getter/setters
 	public static double getIronWeight(){
