@@ -33,7 +33,7 @@ public class Cylinder extends Circle {
 	//areal av bunn/topp/vegg
 	protected double findSurfaceArea(){
 
-		return 2 * Math.PI * Math.pow(getRadius(), 2) + 2 * Math.PI * getRadius() * getHeight();
+		return ( 2 * Math.PI  * Math.pow(getRadius(), 2) ) + ( findCircumference() * getHeight() );
 	}
 
 
@@ -58,7 +58,7 @@ public class Cylinder extends Circle {
 			 + super.toString() 
 			 + "Height: " + height + "dm.  "
 			 + "\n"
-			 + "\nThe cylinders Inner volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
+			 + "\nThe cylinders Volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
 			 + "\nThe cylinders surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
 			 + "\nThe cylinders weight is: " + String.format("%.2f", findWeight() ) + "kg.\n"; 
 	}
