@@ -63,5 +63,5 @@ public class Cone extends Circle {
 	}
 
 
-	} //Cylinder
+	} //Cylinder   https://www.ksecal.com/cone-weight.php
 
