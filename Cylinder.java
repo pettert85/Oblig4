@@ -18,6 +18,12 @@ public class Cylinder extends Circle {
 
 	//Areal av grunnflate * høyde
 	protected double findVolume(){
+
+		return Math.PI * Math.pow(getRadius(), 2) * getHeight();
+	}
+
+	protected double findInnerVolume(){
+		
 		double innerradius = getRadius() - getThickness();
 		double innerheight = getHeight() - 2 * getThickness();
 
@@ -33,7 +39,7 @@ public class Cylinder extends Circle {
 
 	protected double findWeight(){
 	
-		return ( ( Math.PI * Math.pow(getRadius(), 2) * height   - findVolume() ) * getIronWeight()  );
+		return ( ( findVolume()  - findInnerVolume() ) * getIronWeight()  );
 	}
 
 
@@ -52,7 +58,7 @@ public class Cylinder extends Circle {
 			 + super.toString() 
 			 + "Height: " + height + "dm.  "
 			 + "\n"
-			 + "\nThe cylinders volume is: " + String.format("%.2f", findVolume() ) + "dm3" 
+			 + "\nThe cylinders Inner volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
 			 + "\nThe cylinders surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
 			 + "\nThe cylinders weight is: " + String.format("%.2f", findWeight() ) + "kg.\n"; 
 	}
