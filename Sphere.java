@@ -14,10 +14,18 @@ public class Sphere extends Circle {
 	//Methods
 
 	//finner kulas indre volum
-	protected double findVolume(){
+	protected double findInnerVolume(){
 		double innerRadius = getRadius() - getThickness();
 		return (4.0 / 3.0) * Math.PI * Math.pow( innerRadius, 3 );
 	}
+	
+	protected double findVolume(){
+	
+	
+	return (4.0 / 3.0) * Math.PI * Math.pow( getRadius(), 3 );
+	
+	}
+	
 
 	//finner kulas overflateareal
 	protected double findSurfaceArea(){
@@ -32,13 +40,8 @@ public class Sphere extends Circle {
 
 public String toString(){
 
-	return "\nSphere:\n"
-		+ super.toString() 
-		+ "\n"
-		+ "\nThe spheres volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
-		+ "\nThe spheres surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
-		+ "\nThe spheres weight is: " + String.format("%.2f", findWeight() ) + "kg.\n";
+		return super.toString() + ", " + "the surfacearea is " + findSurfaceArea() + 
+								" DM/2, and the weight is " + findWeight() + "kg.";
 	}
-	
 
 } //Sphere
