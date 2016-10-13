@@ -61,7 +61,7 @@ public class Program{
 			System.out.print( sylinder.toString() );
 		}
 		
-		/*
+		
 		if (figure == 3 ){//Cone
 			do {
 				System.out.print("Tast in radius: ");
@@ -81,7 +81,7 @@ public class Program{
 			GeometricObject cone = new Cone(radius, tykkelse , height);
 
 			System.out.print( cone.toString() );
-		}*/
+		}
 		
 		
 		if (figure == 4 ){//Box
