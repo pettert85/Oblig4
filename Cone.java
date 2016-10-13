@@ -18,11 +18,15 @@ public class Cone extends Circle {
 	//Methods
 
 	//Areal av grunnflate * høyde
-	protected double findVolume(){
+	protected double findinnerVolume(){
 		double innerradius = getRadius() - getThickness();
 		double innerheight = getHeight() - 2 * getThickness();
 
 		return Math.PI * Math.pow(innerradius, 2) * innerheight / 3;
+	}
+	protected double findVolume(){
+		
+		return 	Math.PI * Math.pow(getRadius(), 2) * getHeight()/3;
 	}
 
 	//areal av bunn/topp/vegg
@@ -34,7 +38,7 @@ public class Cone extends Circle {
 
 	protected double findWeight(){
 	
-		return ( ( (Math.PI * Math.pow(getRadius(), 2) * height)/3   - findVolume() ) * getIronWeight()  );
+		return ( (  findVolume()  - findVolume() ) * getIronWeight()  );
 	}
 
 
@@ -51,7 +55,7 @@ public class Cone extends Circle {
 
 		return "\nCylinder:\n"
 			 + super.toString() 
-			 + "Height: " + height + "dm.  "
+			 + " Height: " + height + "dm.  "
 			 + "\n"
 			 + "\nThe Cone volume is: " + String.format("%.2f", findVolume() ) + "dm3" 
 			 + "\nThe Cone surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
@@ -60,3 +64,4 @@ public class Cone extends Circle {
 
 
 	} //Cylinder
+
