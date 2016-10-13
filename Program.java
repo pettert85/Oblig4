@@ -23,9 +23,10 @@ public class Program{
 
 
 		if (figure == 1 ){//Sphere
-			do {
-				System.out.print("Enter radius: ");
+			System.out.print("Enter radius: ");
 				radius = input.nextDouble();
+
+			do {
 
 				System.out.print("Enter Thickness: ");
 				tykkelse = input.nextDouble();
@@ -41,12 +42,14 @@ public class Program{
 			}
 
 		if (figure == 2 ){//Cylinder
-			do {
-				System.out.print("Enter radius: ");
-				radius = input.nextDouble();
 
-				System.out.print("Enter height: ");
-				height = input.nextDouble();
+			System.out.print("Enter radius: ");
+			radius = input.nextDouble();
+
+			System.out.print("Enter height: ");
+			height = input.nextDouble();
+
+			do {
 
 				System.out.print("Enter Thickness: ");
 				tykkelse = input.nextDouble();
@@ -63,19 +66,21 @@ public class Program{
 
 
 		if (figure == 3 ){//Cone
-			do {
-				System.out.print("Enter radius: ");
-				radius = input.nextDouble();
 
-				System.out.print("Enter height: ");
-				height = input.nextDouble();
+			System.out.print("Enter radius: ");
+			radius = input.nextDouble();
+
+			System.out.print("Enter height: ");
+			height = input.nextDouble();
+
+			do {
 
 				System.out.print("Enter Thickness: ");
 				tykkelse = input.nextDouble();
 
 				if (radius<tykkelse || height<2*tykkelse){
 					System.out.println("Thickness can not be bigger than radius or height");
-				}
+				}//do while
 			}while(radius<tykkelse || height<2*tykkelse);
 
 			GeometricObject cone = new Cone(radius, tykkelse , height);
@@ -85,15 +90,17 @@ public class Program{
 
 
 		if (figure == 4 ){//Box
+
+			System.out.print("Enter lenght: ");
+			length = input.nextDouble();
+
+			System.out.print("Enter Width: ");
+			width = input.nextDouble();
+
+			System.out.print("Enter height: ");
+			height = input.nextDouble();
+
 			do {
-				System.out.print("Enter lenght: ");
-				length = input.nextDouble();
-
-				System.out.print("Enter Width: ");
-				width = input.nextDouble();
-
-				System.out.print("Enter height: ");
-				height = input.nextDouble();
 
 				System.out.print("Enter Thickness: ");
 				tykkelse = input.nextDouble();
