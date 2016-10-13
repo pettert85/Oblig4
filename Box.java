@@ -18,7 +18,13 @@ public class Box extends Rectangle
 	//Methods
 	protected double findVolume()
 	{
-		return (getLength() - 2 * getThickness()) * (getWidth() - 2 * getThickness()) * (height - 2 * getThickness());
+		return getLength() * getWidth() * height;
+	}
+
+	protected double findInnerVolume()
+	{
+		return (getLength() - 2 * getThickness()) * (getWidth() - 2 * getThickness()) *
+		 (height - 2 * getThickness());
 	}
 
 	protected double findCircumference()
@@ -34,17 +40,17 @@ public class Box extends Rectangle
 
 	protected double findWeight()
 	{
-		return (getLength() * getWidth() * height - findVolume()) * getIronWeight();
+		return ( findVolume() - findInnerVolume() ) * getIronWeight();
 	}
 
 	public String toString()
 	{
 		return super.toString() +
 		 "The box' height is: " + String.format("%.2f", height) + " dm\n" +
-		 "The box' inner volume is: " + String.format("%.2f", findVolume()) + " dm3/3\n" +
+		 "The box' volume is: " + String.format("%.2f", findVolume()) + " dm3/3\n" +
 		 "The box' circumference: " + String.format("%.2f", findCircumference()) + " dm\n" +
 		 "This box has a surfacearea of: " + String.format("%.2f", findSurfaceArea()) + " dm/2\n" +
-		 "The weight of the box is: " + String.format("%.2f", findWeight()) + " kg";
+		 "The weight of the box is: " + String.format("%.2f", findWeight()) + " kg\n";
 	}
 
 
