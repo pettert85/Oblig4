@@ -18,7 +18,7 @@ public class Cone extends Circle {
 	//Methods
 
 	//Areal av grunnflate * høyde
-	protected double findinnerVolume(){
+	protected double findInnerVolume(){
 		double innerradius = getRadius() - getThickness();
 		double innerheight = getHeight() - 2 * getThickness();
 
@@ -38,7 +38,7 @@ public class Cone extends Circle {
 
 	protected double findWeight(){
 	
-		return ( (  findVolume()  - findVolume() ) * getIronWeight()  );
+		return ( (  findVolume()  - findInnerVolume() ) * getIronWeight()  );
 	}
 
 
@@ -63,5 +63,5 @@ public class Cone extends Circle {
 	}
 
 
-	} //Cone
+	} //Cylinder
 
