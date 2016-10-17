@@ -1,10 +1,8 @@
-//har flyttet flere metoder og constructorer hit da flere subklasser kommer til og benytte seg av
-//samme metoder/ constructorer - slik at de kun behøves her.
-
+//En abstrakt superklasse som påser at vi implementerer nødvendige metoder
 
 public abstract class  GeometricObject{
 
-
+	//Tykkelse og vekt av jern er felles for alle underklasser
 	private static double thickness;
 	private static final double IRON_WEIGHT = 7.8; //kg/dm^3
 
@@ -45,11 +43,10 @@ public abstract class  GeometricObject{
 		thickness = t;
 	} //setThickness
 
+//Tostring
 public String toString(){
 
 		return "Thickness: " + thickness + "dm.  ";
 	}
 
 } // GeometricObject
-
-
