@@ -1,3 +1,8 @@
+/*
+Ikke abstrakt, definerer alle metoder i GeometricObjects noen 
+blir definert i Circle klassen
+*/
+
 public class Cylinder extends Circle {
 
 	private static double height;
@@ -16,12 +21,13 @@ public class Cylinder extends Circle {
 
 	//Methods
 
-	//Areal av grunnflate * høyde
+	//Ytre volum
 	protected double findVolume(){
 
 		return Math.PI * Math.pow(getRadius(), 2) * getHeight();
 	}
 
+	//Indre volum
 	protected double findInnerVolume(){
 		
 		double innerradius = getRadius() - getThickness();
@@ -30,20 +36,20 @@ public class Cylinder extends Circle {
 		return Math.PI * Math.pow(innerradius, 2) * innerheight;
 	}
 
-	//areal av bunn/topp/vegg
+	//areal av hele sylinderen
 	protected double findSurfaceArea(){
 
 		return ( 2 * Math.PI  * Math.pow(getRadius(), 2) ) + ( findCircumference() * getHeight() );
 	}
 
-
+	//vekt av volumet til tykkelsen
 	protected double findWeight(){
 	
 		return ( ( findVolume()  - findInnerVolume() ) * getIronWeight()  );
 	}
 
 
-	//gettere/settere
+	//getters/setters
 	public static double getHeight(){
 		return height;
 	} //getHeight
@@ -58,9 +64,9 @@ public class Cylinder extends Circle {
 			 + super.toString() 
 			 + "Height: " + height + "dm.  "
 			 + "\n"
-			 + "\nThe cylinders Volume is: " + String.format("%.2f", findVolume() ) + "dm/3" 
-			 + "\nThe cylinders surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + "dm/2"
-			 + "\nThe cylinders weight is: " + String.format("%.2f", findWeight() ) + "kg.\n"; 
+			 + "\nThe cylinders Volume is: " + String.format("%.2f", findVolume() ) + " dm^3." 
+			 + "\nThe cylinders surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + " dm^2."
+			 + "\nThe cylinders weight is: " + String.format("%.2f", findWeight() ) + " kg.\n"; 
 	}
 
 
