@@ -1,3 +1,4 @@
+//En klasse for å oprette grunnstammen i boksen vi lager i sub-klassen
 public abstract class Rectangle extends GeometricObject
 {
 	private static double length, width;
@@ -30,7 +31,7 @@ public abstract class Rectangle extends GeometricObject
 		return 2 * l + 2 * w;
 	}
 
-	//Getters n' setters
+	//Getters and setters
 	public static double getLength()
 	{
 		return length;
@@ -51,12 +52,14 @@ public abstract class Rectangle extends GeometricObject
 		width = w;
 	}
 
+	//Metode for utskrift slik at vi, i hovedprogrammet
+	 //enkelt kan skrive ut data
 	public String toString()
 	{
-		return "Length: " + String.format("%.2f", length) + " dm\n" +
-		  "Width: " + String.format("%.2f", width) + " dm\n" +
-		  "Base area: " + String.format("%.2f", findArea()) + " dm/2 \n" +
-		  super.toString();
+		return super.toString() +
+			   "Length: " + String.format("%.2f", length) + " dm.\n" +
+		 	   "Width: " + String.format("%.2f", width) + " dm.\n" +
+		 	   "Base area: " + String.format("%.2f", findArea()) + " dm^2 \n";
 	}
 
 }//Rectangle
