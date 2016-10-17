@@ -1,3 +1,8 @@
+/*
+Ikke abstrakt, definerer alle metoder i GeometricObjects noen 
+blir definert i Circle klassen
+*/
+
 public class Cone extends Circle {
 
 	private static double height;
