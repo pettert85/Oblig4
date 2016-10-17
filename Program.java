@@ -5,7 +5,7 @@ public class Program{
 
 	public static void main (String[] args){
 		double radius;
-		double tykkelse,height,length, width;
+		double tykkelse, height, length, width;
 
 				Scanner input = new Scanner(System.in);
 		int figure;

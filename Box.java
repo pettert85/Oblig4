@@ -1,7 +1,7 @@
 //I denne, ikke abstrakte, klassen oppretter vi objekter av typen boks
 public class Box extends Rectangle
 {
-	private double height;
+	private static double height;
 
 	//Constructors
 	protected Box()
@@ -14,6 +14,17 @@ public class Box extends Rectangle
 	{
 		super(t, l, w);
 		height = h;
+	}
+
+	//Getters and setters
+	public static void setHeight(double h)
+	{
+		height = h;
+	}
+
+	public static double getHeight()
+	{
+		return height;
 	}
 
 	//Methods
