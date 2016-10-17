@@ -46,7 +46,7 @@ public abstract class  GeometricObject{
 //Tostring
 public String toString(){
 
-		return "Thickness: " + thickness + "dm.  ";
+		return "Thickness: " + thickness + " dm.  ";
 	}
 
 } // GeometricObject
