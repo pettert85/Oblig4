@@ -1,18 +1,24 @@
-//behøver bare metoder som tilhører en sirkel
+/*
+Definert som abstract metode da den ikke definerer alle metoder i
+GeometricObjects - kan ikke oprette objekter fra denne klassen.
+
+*/
 
 public abstract class Circle extends GeometricObject { 
 	private static double radius;
 	
+	//constructors
 	protected Circle(){
 		
+		//arver superklassens default constructor + radius
 		super();
 		radius = 1;
-		}
+	}
 
 	protected Circle(double r, double t){
 		super(t);
 		radius = r;
-		} 
+	} 
 
 
 	//Methods
@@ -25,7 +31,7 @@ public abstract class Circle extends GeometricObject {
 	}
 
 
-	//getter/setters
+	//getters/setters
 	public static double getRadius(){
 		return radius;
 	} //getRadius
