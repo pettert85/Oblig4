@@ -1,4 +1,4 @@
-//I denne klassen oppretter vi objekter av typen boks
+//I denne, ikke abstrakte, klassen oppretter vi objekter av typen boks
 public class Box extends Rectangle
 {
 	private double height;
@@ -47,12 +47,13 @@ public class Box extends Rectangle
 	//Endelig metode som vi skriver ut i hovedprogrammet
 	public String toString()
 	{
-		return super.toString() +
-			   "Height: " + String.format("%.2f", height) + " dm.\n" +
-			   "Volume: " + String.format("%.2f", findVolume()) + " dm^3.\n" +
+		return "\nBox: \n" +
+			   super.toString() +
+			   "Height: " + String.format("%.2f", height) + " dm.  " +
 			   "Circumference: " + String.format("%.2f", findCircumference()) + " dm.\n" +
-			   "This box has a surfacearea of: " + String.format("%.2f", findSurfaceArea()) + " dm^2.\n" +
-			   "The weight of the box is: " + String.format("%.2f", findWeight()) + " kg.\n";
+			   "The box' volume is: " + String.format("%.2f", findVolume()) + " dm^3.\n" +
+			   "The box' surfacearea is: " + String.format("%.2f", findSurfaceArea()) + " dm^2.\n" +
+			   "The box' weight is: " + String.format("%.2f", findWeight()) + " kg.\n";
 	}
 
 

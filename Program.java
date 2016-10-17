@@ -10,134 +10,116 @@ public class Program{
 				Scanner input = new Scanner(System.in);
 		int figure;
 //Select figure
-		System.out.print("Select a figure: \n Sphere = 1 \n Cylinder = 2 \n Cone = 3 \n Box = 4 \n Prism = 5 \n");
-			do{
-				figure = input.nextInt();
 
-				if (figure<1 || figure>5){
-					System.out.println("You can only select a defined shape");
+
+			do{
+				do{
+					System.out.print("Select a figure: \n Sphere = 1 \n Cylinder = 2 \n Cone = 3 \n Box = 4 \n" +
+					"(Enter 0 to exit)");
+
+					figure = input.nextInt();
+
+					if (figure<-1 || figure>4){
+						System.out.println("You can only select a defined shape");
 					}
 
-			}while(figure<1 || figure>5);
+					}while(figure<0 || figure>4);
+
+						if (figure == 1 ){//Sphere
+							System.out.print("Enter radius (in dm): ");
+							radius = input.nextDouble();
+
+						do {
+
+							System.out.print("Enter Thickness: (in dm) ");
+							tykkelse = input.nextDouble();
+
+							if (radius<tykkelse){
+								System.out.println("Thickness can not be bigger than radius");
+							}
+
+						}while(radius<tykkelse);
+
+						GeometricObject sphere = new Sphere(radius, tykkelse);
+
+						System.out.println(sphere.toString());
+					}//if Sphere
+
+					if (figure == 2 ){//Cylinder
+
+						System.out.print("Enter radius (in dm): ");
+						radius = input.nextDouble();
+
+						System.out.print("Enter height (in dm): ");
+						height = input.nextDouble();
+
+						do {
+
+							System.out.print("Enter Thickness (in dm): ");
+							tykkelse = input.nextDouble();
+
+							if (radius<tykkelse || height<2*tykkelse){
+								System.out.println("Thickness can not be bigger than radius or height");
+							}
+						}while(radius<tykkelse || height<2*tykkelse);
+
+						GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
+
+						System.out.print( sylinder.toString() );
+					}//if Cylinder
 
 
+					if (figure == 3 ){//Cone
 
-		if (figure == 1 ){//Sphere
-			System.out.print("Enter radius: ");
-				radius = input.nextDouble();
+						System.out.print("Enter radius (in dm): ");
+						radius = input.nextDouble();
 
-			do {
+						System.out.print("Enter height (in dm): ");
+						height = input.nextDouble();
 
-				System.out.print("Enter Thickness: ");
-				tykkelse = input.nextDouble();
+						do {
 
-				if (radius<tykkelse){
-					System.out.println("Thickness can not be bigger than radius");
-				}
-			}while(radius<tykkelse);
+							System.out.print("Enter Thickness (in dm): ");
+							tykkelse = input.nextDouble();
 
-			GeometricObject sphere = new Sphere(radius, tykkelse);
+							if (radius<tykkelse || height<2*tykkelse){
+								System.out.println("Thickness can not be bigger than radius or height");
+							}
+						}while(radius<tykkelse || height<2*tykkelse);
 
-			System.out.println(sphere.toString());
-			}
+						GeometricObject cone = new Cone(radius, tykkelse , height);
 
-		if (figure == 2 ){//Cylinder
-
-			System.out.print("Enter radius: ");
-			radius = input.nextDouble();
-
-			System.out.print("Enter height: ");
-			height = input.nextDouble();
-
-			do {
-
-				System.out.print("Enter Thickness: ");
-				tykkelse = input.nextDouble();
-
-				if (radius<tykkelse || height<2*tykkelse){
-					System.out.println("Thickness can not be bigger than radius or height");
-				}
-			}while(radius<tykkelse || height<2*tykkelse);
-
-			GeometricObject sylinder = new Cylinder(radius, tykkelse , height);
-
-			System.out.print( sylinder.toString() );
-		}
+						System.out.print( cone.toString() );
+					}//if Cone
 
 
-		if (figure == 3 ){//Cone
+					if (figure == 4 ){//Box
 
-			System.out.print("Enter radius: ");
-			radius = input.nextDouble();
+						System.out.print("Enter lenght (in dm): ");
+						length = input.nextDouble();
 
-			System.out.print("Enter height: ");
-			height = input.nextDouble();
+						System.out.print("Enter width (in dm): ");
+						width = input.nextDouble();
 
-			do {
+						System.out.print("Enter height (in dm): ");
+						height = input.nextDouble();
 
-				System.out.print("Enter Thickness: ");
-				tykkelse = input.nextDouble();
+						do {
 
-				if (radius<tykkelse || height<2*tykkelse){
-					System.out.println("Thickness can not be bigger than radius or height");
-				}//do while
-			}while(radius<tykkelse || height<2*tykkelse);
+							System.out.print("Enter Thickness (in dm): ");
+							tykkelse = input.nextDouble();
 
-			GeometricObject cone = new Cone(radius, tykkelse , height);
+							if (length<2*tykkelse || height<2*tykkelse || width<2*tykkelse ){
+								System.out.println("Thickness can not be bigger than twice the length, width or height");
+							}
+						}while(length<2*tykkelse || height<2*tykkelse || width<2*tykkelse );
 
-			System.out.print( cone.toString() );
-		}
+						GeometricObject box = new Box(tykkelse, length , width, height);
 
+						System.out.print( box.toString() );
+					}//if Box
 
-		if (figure == 4 ){//Box
-
-			System.out.print("Enter lenght: ");
-			length = input.nextDouble();
-
-			System.out.print("Enter Width: ");
-			width = input.nextDouble();
-
-			System.out.print("Enter height: ");
-			height = input.nextDouble();
-
-			do {
-
-				System.out.print("Enter Thickness: ");
-				tykkelse = input.nextDouble();
-
-				if (length<2*tykkelse || height<2*tykkelse || width<2*tykkelse ){
-					System.out.println("Thickness can not be bigger than twice the length, width or height");
-				}
-			}while(length<2*tykkelse || height<2*tykkelse || width<2*tykkelse );
-
-			GeometricObject box = new Box(tykkelse, length , width, height);
-
-			System.out.print( box.toString() );
-		}
-
-		/*
-		if (figure == 5 ){//Prism
-			do {
-				System.out.print("Tast in radius: ");
-				lenght = input.nextDouble();
-
-				System.out.print("Tast in height: ");
-				height = input.nextDouble();
-
-				System.out.print("Tast in Thickness: ");
-				tykkelse = input.nextDouble();
-
-				if (radius<tykkelse || height<2*tykkelse){
-					System.out.println("Thickness can not be bigger than radius or height");
-				}
-			}while(radius<tykkelse || height<2*tykkelse);
-
-			GeometricObject prism = new Prism(radius, tykkelse , height);
-
-			System.out.print( prism.toString() );
-		}*/
-
-
-  	}
-}
+			}/*Upper do while*/ while (figure != 0);
+	}//Main
+}//Class
 
