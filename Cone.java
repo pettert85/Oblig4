@@ -64,7 +64,7 @@ public class Cone extends Circle {
 
 		return "\nCone:\n"
 			 + super.toString() 
-			 + " Height: " + height + "dm.  "
+			 + " Height: " + height + " dm.  "
 			 + "\n"
 			 + "\nThe Cones volume is: " + String.format("%.2f", findVolume() ) + " dm^3." 
 			 + "\nThe Cones surfacearea is: " + String.format("%.2f", findSurfaceArea() )  + " dm^2."
