@@ -1,4 +1,3 @@
-
 public class Cone extends Circle {
 
 	private static double height;
@@ -19,11 +18,14 @@ public class Cone extends Circle {
 
 	//Areal av grunnflate * høyde
 	protected double findInnerVolume(){
-		double innerradius = getRadius() - getThickness();
-		double innerheight = getHeight() - 2 * getThickness();
-
+		double x = (getHeight() * getThickness())/getRadius();
+		double innerheight = Math.sqrt(Math.pow(x, 2)+Math.pow(getThickness(), 2));
+		
+		double innerradius = (innerheight *2*getRadius())/getHeight();
+		
 		return Math.PI * Math.pow(innerradius, 2) * innerheight / 3;
 	}
+	
 	protected double findVolume(){
 		
 		return 	Math.PI * Math.pow(getRadius(), 2) * getHeight()/3;
@@ -63,5 +65,4 @@ public class Cone extends Circle {
 	}
 
 
-	} //Cylinder   https://www.ksecal.com/cone-weight.php
-
+	} //Cylinder
