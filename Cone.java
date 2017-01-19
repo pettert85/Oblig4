@@ -1,6 +1,6 @@
 /*
 Ikke abstrakt, definerer alle metoder i GeometricObjects noen 
-blir definert i Circle klassen
+blir definert i Circle klassen, test.
 */
 
 public class Cone extends Circle {
