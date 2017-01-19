@@ -1,4 +1,4 @@
-//I denne, ikke abstrakte, klassen oppretter vi objekter av typen boks
+//I denne, ikke abstrakte, klassen oppretter vi objekter av typen boks, loks
 public class Box extends Rectangle
 {
 	private static double height;
